@@ -76,6 +76,7 @@ JSON.parse(resume.value) as Resume
               <ResumeCard  key={resume.id} resume={resume} />
             ))}
           </div>
+          
         )}
 
         {!loadingResumes && resumes.length===0 &&(
@@ -83,6 +84,9 @@ JSON.parse(resume.value) as Resume
             <Link className="primary-button w-fit text-xl font-semibold" to="/upload">Upload Resume</Link>
           </div>
         )}
+       {resumes.length > 0 &&( <button className="w-fit h-fit primary-button">
+              <Link to="/wipe">wipeout</Link>
+            </button>)}
       </section>
     </main>
   );
